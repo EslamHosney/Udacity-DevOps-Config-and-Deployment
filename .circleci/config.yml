@@ -40,8 +40,8 @@ jobs:
 workflows:
   Create-Delete-workflow:
     jobs:
-#      - create_infrastructure
-      - config_playbook
+      - create_infrastructure
+#      - config_playbook
 #      - delete_infrastructure:
 #        requires:
 #          - create_infrastructure
