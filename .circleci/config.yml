@@ -18,11 +18,26 @@ jobs:
               --template-file template.yml \
               --stack-name Udacity-CircleCI \
               --region us-east-1
-
+  config_playbook: 
+    docker:
+      - image: amazon/aws-cli
+    steps:
+      - checkout
+      - add_ssh_keys:
+          fingerprints:
+              - "12:95:0e:b8:82:80:9c:53:1e:ee:9d:61:af:52:fb:78"
+      - run:
+          name: Create Cloudformation Stack Udacity-CircleCI
+          command: |
+            ls -la
+            aws cloudformation deploy \
+              --template-file template.yml \
+              --stack-name Udacity-CircleCI \
+              --region us-east-1
 workflows:
   Create-Delete-workflow:
     jobs:
-      - create_infrastructure
+#      - create_infrastructure
 #      - delete_infrastructure:
 #        requires:
 #          - create_infrastructure
