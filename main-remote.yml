@@ -1,0 +1,7 @@
+---
+#create EC2 ubuntu instance and allow 3000 TCP inbound and update the inventory file with IP
+- name: Exercise for setting up a web server in an EC2
+  hosts: all
+  user: ubuntu
+  roles:
+  - setup
