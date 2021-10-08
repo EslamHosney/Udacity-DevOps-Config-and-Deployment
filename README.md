@@ -4,3 +4,6 @@ Create Infra using EC2 Cloud Formation then using Ansible configure the EC2
             AWS_ACCESS_KEY_ID	xxxxIYUU
             AWS_DEFAULT_REGION	us-east-1 
             AWS_SECRET_ACCESS_KEY xxxxWx1p
+    -   Add the template.yml to your commit to eb accesable by the job
+    -   
+
