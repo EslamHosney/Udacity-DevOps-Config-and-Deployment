@@ -20,7 +20,7 @@ jobs:
               --region us-east-1
   config_playbook: 
     docker:
-      - image: amazon/aws-cli
+      - image: python:3.7-alpine3.11
     steps:
       - checkout
       - add_ssh_keys:
@@ -37,7 +37,7 @@ jobs:
 workflows:
   Create-Delete-workflow:
     jobs:
-#      - create_infrastructure
+      - create_infrastructure
 #      - delete_infrastructure:
 #        requires:
 #          - create_infrastructure
